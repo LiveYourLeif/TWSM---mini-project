@@ -1,68 +1,92 @@
-
 /* Sets the background color of the website */
-body{
+body {
     background-color: rgb(209, 207, 207);
 }
 
-/* Container for the meme creating process. */
-.container-for-meme-generation{
-    border: 2px solid black;
-    padding: 20px;
-    width: 207px;
-    margin: 0 auto;
-  }
-  
-
-#main-header{
+#main-header {
     color: rgb(60, 150, 167);
     font-size: xx-large;
     font-family: Verdana;
     text-align: center;
+
 }
 
-  
-/* Finds the ID called top-text, and applies different style sheets to it's element */
-#text-field-1{
+/* Container for the meme creating process. */
+.container-for-meme-generation {
+    border: 2px solid black;
+    padding: 20px;
+    width: 207px;
+    margin: 0 auto 1;
+}
+
+
+/* Finds the ID called text-field-1, and applies different style sheets to it's element */
+#text-field-1 {
     border: black;
     border: groove;
     border-width: medium;
 }
 
-/* Finds the ID called bottom-text, and applies different style sheets to it's element */
-#text-field-2{
+/* Finds the ID called text-field-2, and applies different style sheets to it's element */
+#text-field-2 {
     border: black;
     border: groove;
     border-width: medium;
 }
 
 /* Font menu css */
-#font-menu{
+#font-menu {
     border: black;
     border: groove;
-    
+
 }
 
 /* Font size css */
-#font-size{
+#font-size {
     border: black;
     border: groove;
 }
 
 
 
-#generate-meme-button{
-  background-color: #10b716; 
-  color: white;
-  padding: 8px 16px;
-  text-align: center;
-  font-size: 16px;
-  display: block;
-  margin: 0 auto;
-}
-
-#generate-meme-button:hover{
-  background-color: #239727;
+.meme-showcase {
+    border: 5px solid rgb(0, 0, 0);
+    padding: 240px;
+    width: 500px;
 }
 
 
+#meme-template {
+    border: rgb(255, 0, 0);
+    border-width: medium;
+}
 
+#meme-placeholder {
+    border: black;
+    border-width: medium;
+    margin: auto;
+}
+
+#generate-meme {
+    
+}
+
+#generate-meme-button {
+    background-color: #10b716;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    font-size: 16px;
+    display: block;
+    margin: auto 1;
+}
+
+#generate-meme-button:hover {
+    background-color: #239727;
+}
+
+
+#meme-output {
+    border: black;
+    border-width: medium;
+}
