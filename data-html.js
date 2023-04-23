@@ -8,4 +8,5 @@ function loadDoc() {
     };
     xhttp.open("GET", src="Drake-Hotline-Bling.jpg", true);
     xhttp.send();
+    let
   }
