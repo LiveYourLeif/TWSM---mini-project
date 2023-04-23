@@ -1,0 +1,22 @@
+{
+  "name": "twsm---mini-project",
+  "version": "1.0.0",
+  "description": "memepage",
+  "main": "data-html.js",
+  "scripts": {
+    "test": "test1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LiveYourLeif/TWSM---mini-project.git"
+  },
+  "keywords": [
+    "1234"
+  ],
+  "author": "lava,rommel,valentin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LiveYourLeif/TWSM---mini-project/issues"
+  },
+  "homepage": "https://github.com/LiveYourLeif/TWSM---mini-project#readme"
+}
