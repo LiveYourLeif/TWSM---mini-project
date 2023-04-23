@@ -27,10 +27,10 @@ $conn = OpenCon();
     <div class="meme-container">
         <h2>Choose meme template:</h2>
           <div class="grid-container">
-              <div class="grid-item"><img src="Stramt.png"></div>
-              <div class="grid-item"><img src="chad.png"></div>
-              <div class="grid-item"><img src="pov.png"></div>
-              <div class="grid-item"><img src="Pog.png"></div>
+              <div class="grid-item"><img src="Stramt.png" data-image = "Stramt.png" alt = "Stramt.png"> </div> <!--we use the data-* attribute to store cutom data, and also add alt attribute if the image does not load -->
+              <div class="grid-item"><img src="chad.png" data-image = "chad.png" alt = "chad.png"> </div>
+              <div class="grid-item"><img src="pov.png" data-image = "pov.png" alt = "pov.png"> </div>
+              <div class="grid-item"><img src="Pog.png" data-image = "Pog.png" alt = "Pog.png"> </div>
           </div>
     </div>
 </body>
