@@ -17,7 +17,7 @@ $conn = OpenCon();
         <input type="text" placeholder="Enter text here">
         <h2>Bottom Text</h2>
         <input type="text" placeholder="Enter text here">
-        <img img id="placeholder" src="images/PlaceHolder.jpg">
+        <img img id="placeholder" src="images/PlaceHolder.jpg" data-image = "placeholder.jpg" alt ="shit aint work">
         <div class="button-container">
             <button class="generate-button">Generate</button>
             <button class="share-button">Share</button>
@@ -32,13 +32,9 @@ $conn = OpenCon();
               <div class="grid-item"><img src="images/Pog.png" data-image = "Pog.png" alt = "Pog.png"> </div>
           </div>
     </div>
+    <script src="Event-handler.js"></script>
     <script>
-        console.log("BEFORE INCLUDING event-handler.js");
-    </script>
-    <script
-    src="Event-handler.js"></script>
-    <script>
-        console.log("AFter INCLUDING event-handler.js");
+        loadImage();
     </script>
 </body>
 </html>
