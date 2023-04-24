@@ -2,7 +2,6 @@
 include 'db_connection.php';
 $conn = OpenCon();
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -33,12 +32,21 @@ $conn = OpenCon();
               <div class="grid-item"><img src="images/Pog.png" data-image = "Pog.png" alt = "Pog.png"> </div>
           </div>
     </div>
+    <script>
+        console.log("BEFORE INCLUDING event-handler.js");
+    </script>
+    <script
+    src="Event-handler.js"></script>
+    <script>
+        console.log("AFter INCLUDING event-handler.js");
+    </script>
 </body>
 </html>
 
 <?php 
 	if ($conn) {
 		CloseCon($conn);
+        
 	} else {
 		echo "Connection Failed";
 	}
