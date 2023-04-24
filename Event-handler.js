@@ -14,7 +14,11 @@ thumbnailArr.forEach(function(thumbnail) {
         xhr.open('GET', 'load_image.php?filename=' + filename);
         xhr.onload = function() {
             if (xhr.status === 200) {
-                placeholder.setAttribute('src', "images/" + filename)
+                let response = JSON.parse(xhr.responseText);
+                let imgSrc = "data:" + response.mime_type + ";base64," + response.base64_image;
+                placeholder.setAttribute('src', imgSrc);
+                console.log("this is image src:" + imgSrc)
+                //placeholder.setAttribute('src', "images/" + filename)
                 console.log("Image Replaced with "+filename);
             }
             else {

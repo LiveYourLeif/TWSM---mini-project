@@ -14,9 +14,9 @@ $conn = OpenCon();
     </div>
     <div class="container">
         <h2>Top Text</h2>
-        <input type="text" placeholder="Enter text here">
+        <input type="text" id = "topText" placeholder="Enter text here">
         <h2>Bottom Text</h2>
-        <input type="text" placeholder="Enter text here">
+        <input type="text" id = "bottomText" placeholder="Enter text here">
         <img img id="placeholder" src="images/PlaceHolder.jpg" data-image = "placeholder.jpg" alt ="shit aint work">
         <div class="button-container">
             <button class="generate-button">Generate</button>
