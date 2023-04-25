@@ -15,11 +15,10 @@ thumbnailArr.forEach(function(thumbnail) {
         xhr.onload = function() {
             if (xhr.status === 200) {
                 let response = JSON.parse(xhr.responseText);
-                let imgSrc = "data:" + response.mime_type + ";base64," + response.base64_image;
+                let imgSrc = "data:" + response.mimeType + ";base64," + response.base64Image;
                 placeholder.setAttribute('src', imgSrc);
-                console.log("this is image src:" + imgSrc)
-                //placeholder.setAttribute('src', "images/" + filename)
-                console.log("Image Replaced with "+filename);
+                console.log(imgSrc)
+                console.log("Image Replaced with " + filename);
             }
             else {
                 console.log('Error loading the image');

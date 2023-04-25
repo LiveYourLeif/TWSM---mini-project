@@ -1,15 +1,16 @@
 <?php
- $filename = $_GET['filename'];
-$image_path = 'images/'. $filename;
-$image = file_get_contents($image_path);
-$image_info = getimagesize($image_path); 
+$filename = $_GET['filename'];
+$imagePath = 'images/'. $filename;
+$image = file_get_contents($imagePath);
+$imageInfo = getimagesize($imagePath); 
 
-if ($image_info) {
-    $mime_type = $image_info['mime']; // get the mime type
-    $base64_image = base64_encode($image);
+//if there is an image file loaded,
+if ($imageInfo) {  
+    $mimeType = $imageInfo['mime']; //Gets the mime type of the image, e.g. image/png or image/jpg. We have to do this because we have images of both types.
+    $base64Image = base64_encode($image); //we have to convert the binary image data to a string. Only then can it be sent over the internet.
     $data = array ( 
-        'mime_type' => $mime_type,
-        'base64_image' => $base64_image
+        'mimeType' => $mimeType,
+        'base64Image' => $base64Image
     );
     header('Content-Type: application/json');
     echo json_encode($data);
@@ -17,17 +18,5 @@ if ($image_info) {
     header("HTTP/1.0 404 Not Found");
     echo "Error: File not found";
 } 
-
-/* $filename = $_GET['filename'];
-$image_path = 'images/'. $filename;
-
-if (file_exists($image_path)) {
-    $mime_type = mime_content_type($image_path); // get the mime type
-    header("Content-Type: {$mime_type}");
-    readfile($image_path);
-} else {
-    header("HTTP/1.0 404 Not Found");
-    echo "Error: File not found";
-} */
 ?>
 
