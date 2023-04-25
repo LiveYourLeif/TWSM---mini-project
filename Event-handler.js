@@ -47,6 +47,8 @@ thumbnailArr.forEach(function(thumbnail) {
     thumbnail.addEventListener('click', function(){
         topTextInput.removeAttribute("readonly");
         bottomTextInput.removeAttribute("readonly");
+        topTextInput.value = "";
+        bottomTextInput.value = "";
         let filename = this.getAttribute('data-image');
         let xhr = new XMLHttpRequest();
         xhr.open('GET', 'load_image.php?filename=' + filename);
