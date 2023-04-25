@@ -45,6 +45,8 @@ let placeholder = document.getElementById('placeholder');
 let thumbnailArr = Array.from(thumbnails)
 thumbnailArr.forEach(function(thumbnail) {
     thumbnail.addEventListener('click', function(){
+        topTextInput.removeAttribute("readonly");
+        bottomTextInput.removeAttribute("readonly");
         let filename = this.getAttribute('data-image');
         let xhr = new XMLHttpRequest();
         xhr.open('GET', 'load_image.php?filename=' + filename);
@@ -68,8 +70,8 @@ thumbnailArr.forEach(function(thumbnail) {
 function checkEnterKey(event) {
     if (event.keyCode === 13) { // Check if the Enter key was pressed
       applyTextToImage();
-    
-
+      topTextInput.setAttribute("readonly", true);
+      bottomTextInput.setAttribute("readonly", true);
     }
   }
 
