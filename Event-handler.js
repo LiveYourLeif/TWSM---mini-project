@@ -1,3 +1,39 @@
+let topTextInput = document.getElementById("topText");
+let bottomTextInput = document.getElementById("bottomText");
+//topTextInput.addEventListener("input", applyTextToImage);
+//bottomTextInput.addEventListener("input", applyTextToImage);
+
+topTextInput.addEventListener("keypress", checkEnterKey);
+bottomTextInput.addEventListener("keypress", checkEnterKey);
+
+
+function applyTextToImage() {
+  let topText = document.getElementById("topText").value;
+  let bottomText = document.getElementById("bottomText").value;
+  let memeImage = document.getElementById("placeholder");
+  let canvas = document.createElement("canvas");
+  let ctx = canvas.getContext("2d");
+  canvas.width = memeImage.width;
+  canvas.height = memeImage.height;
+  ctx.drawImage(memeImage, 0, 0);
+  ctx.font = "40px Impact";
+  ctx.fillStyle = "white";
+  ctx.strokeStyle = "black";
+  ctx.lineWidth = 2;
+  ctx.textAlign = "center";
+  ctx.textBaseline = "top";
+  ctx.fillText(topText, canvas.width/2, 10);
+  ctx.strokeText(topText, canvas.width/2, 10);
+  ctx.textBaseline = "bottom";
+  ctx.fillText(bottomText, canvas.width/2, canvas.height - 10);
+  ctx.strokeText(bottomText, canvas.width/2, canvas.height - 10);
+
+  memeImage.src = canvas.toDataURL();
+  console.log("Does this function run once??")
+}
+
+  
+
 function loadImage() {
 let thumbnails = document.querySelectorAll('.grid-item img');   //select all the images
 console.log(thumbnails);
@@ -28,3 +64,12 @@ thumbnailArr.forEach(function(thumbnail) {
     });
 });
 }
+
+function checkEnterKey(event) {
+    if (event.keyCode === 13) { // Check if the Enter key was pressed
+      applyTextToImage();
+    
+
+    }
+  }
+
