@@ -12,10 +12,10 @@ if (!$conn) {
 //create a table for storing the memes
 $sql = "CREATE TABLE memes (
     id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    image_name VARCHAR(255) NOT NULL,
-    top_text VARCHAR(255) NOT NULL,
-    bottom_text VARCHAR(255) NOT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    memeCreated BLOB NOT NULL,
+    topText VARCHAR(255) NOT NULL,
+    bottomText VARCHAR(255) NOT NULL,
+    createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 )";
 
 if (mysqli_query($conn, $sql)) {

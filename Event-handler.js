@@ -1,10 +1,6 @@
 let topTextInput = document.getElementById("topText");
 let bottomTextInput = document.getElementById("bottomText");
-//topTextInput.addEventListener("input", applyTextToImage);
-//bottomTextInput.addEventListener("input", applyTextToImage);
 
-topTextInput.addEventListener("keypress", checkEnterKey);
-bottomTextInput.addEventListener("keypress", checkEnterKey);
 
 
 function applyTextToImage() {
@@ -67,11 +63,30 @@ thumbnailArr.forEach(function(thumbnail) {
 });
 }
 
-function checkEnterKey(event) {
-    if (event.keyCode === 13) { // Check if the Enter key was pressed
-      applyTextToImage();
-      topTextInput.setAttribute("readonly", true);
-      bottomTextInput.setAttribute("readonly", true);
-    }
+function storeMeme() {
+    let memeImage = document.getElementById("placeholder").src;
+    let topText = document.getElementById("topText").value;
+    let bottomText = document.getElementById("bottomText").value;
+
+    let xhr = new XMLHttpRequest();
+    xhr.open('POST', 'insert_data_to_table.php');
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded'); //sets the value of a HTTP request header.
+    xhr.onload = function() {
+        if (xhr.status === 200) {
+            console.log("data has been saved");
+        }
+        else{
+            console.log("data was not saved unfortunately");
+        }
+    };
+    xhr.send('topText=' + topText + '&bottomText=' + bottomText + '&memeImage=' + memeImage);
+}
+
+function generateMeme() {
+    console.log("meme generated");
+    applyTextToImage();
+    topTextInput.setAttribute("readonly", true);
+    bottomTextInput.setAttribute("readonly", true);
+    
   }
 

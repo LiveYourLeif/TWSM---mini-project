@@ -25,13 +25,10 @@ $conn = OpenCon();
         <img img id="placeholder" src="images/PlaceHolder.jpg" data-image="placeholder.jpg" alt="shit aint work">
         <div class="centered" id="inputBottomText"> </div>
         <div class="button-container">
-            <button class="generate-button">Generate</button>
-            <button class="share-button">Share</button>
+            <button class="generate-button" onclick="generateMeme()" >Generate</button>
+            <button class="share-button" id="saveButton" name="saveButton" onclick="storeMeme()" >Save</button>
         </div>
     </div>
-
-
-
     <div class="meme-container">
         <h2>Choose meme template:</h2>
         <div class="grid-container">
