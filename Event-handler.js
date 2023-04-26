@@ -81,7 +81,9 @@ function storeMeme() {
             console.log("data was not saved unfortunately");
         }
     };
+    console.log("here comes a long code...")
     xhr.send('topText=' + topText + '&bottomText=' + bottomText + '&memeImage=' + memeImage);
+    console.log(m);
 }
 
 function generateMeme() {
