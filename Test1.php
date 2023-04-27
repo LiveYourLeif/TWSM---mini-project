@@ -33,11 +33,11 @@ $conn = OpenCon();
     <div class="meme-container">
         <h2>Choose meme template:</h2>
         <div class="grid-container">
-            <div class="grid-item"><img src="images/Stramt.png" data-image="Stramt.png" alt="Stramt.png"> </div>
+            <div class="grid-item"><img src="images/spongebob.png" data-image="spongebob.png" alt="spongebob.png"> </div>
             <!--we use the data-* attribute to store cutom data, and also add alt attribute if the image does not load -->
-            <div class="grid-item"><img src="images/chad.png" data-image="chad.png" alt="chad.png"> </div>
-            <div class="grid-item"><img src="images/pov.png" data-image="pov.png" alt="pov.png"> </div>
-            <div class="grid-item"><img src="images/Pog.png" data-image="Pog.png" alt="Pog.png"> </div>
+            <div class="grid-item"><img src="images/videnskab.png" data-image="videnskab.png" alt="videnskab.png"> </div>
+            <div class="grid-item"><img src="images/toystory.png" data-image="toystory.png" alt="toystory.png"> </div>
+            <div class="grid-item"><img src="images/fist.png" data-image="fist.png" alt="fist.png"> </div>
         </div>
     </div>
     <script src="Event-handler.js"></script>
