@@ -80,13 +80,13 @@ input[type=text] {
 
 .button-container {
   display: flex;
-  justify-content: space-between;
+flex-direction: column;
   margin-top: 3%;
   margin-left: 0;
   margin-right: 0;
 }
 
-.generate-button, .share-button {
+.generate-button, .share-button, .storage-button {
   background-color: #5ADF96;
   border: none;
   color: white;
@@ -95,10 +95,12 @@ input[type=text] {
   font-size: 140%;
   cursor: pointer;
   border-radius: 20px;
-  width: 45%;
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 2%;
 }
 
-.generate-button:hover, .share-button:hover {
+.generate-button:hover, .share-button:hover, .storage-button:hover {
   background-color: #4EC282;
 }
 
