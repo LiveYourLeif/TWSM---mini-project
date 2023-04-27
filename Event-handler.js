@@ -1,6 +1,6 @@
 let topTextInput = document.getElementById("topText");
 let bottomTextInput = document.getElementById("bottomText");
-
+let filename;
 
 
 function applyTextToImage() {
@@ -25,14 +25,12 @@ function applyTextToImage() {
   ctx.strokeText(bottomText, canvas.width/2, canvas.height - 10);
 
   memeImage.src = canvas.toDataURL();
-  console.log("Does this function run once??")
 }
 
   
 
 function loadImage() {
 let thumbnails = document.querySelectorAll('.grid-item img');   //select all the images
-console.log(thumbnails);
 let placeholder = document.getElementById('placeholder');
     //we add an event listener to each of the thumbnail images. when the user presses on one 
     //of the images it extracts the filename from the 'data-image' attribute which we will use
@@ -45,7 +43,8 @@ thumbnailArr.forEach(function(thumbnail) {
         bottomTextInput.removeAttribute("readonly");
         topTextInput.value = "";
         bottomTextInput.value = "";
-        let filename = this.getAttribute('data-image');
+        filename = this.getAttribute('data-image');
+        console.log(filename);
         let xhr = new XMLHttpRequest();
         xhr.open('GET', 'load_image.php?filename=' + filename);
         xhr.onload = function() {
@@ -53,8 +52,6 @@ thumbnailArr.forEach(function(thumbnail) {
                 let response = JSON.parse(xhr.responseText);
                 let imgSrc = "data:" + response.mimeType + ";base64," + response.base64Image;
                 placeholder.setAttribute('src', imgSrc);
-                console.log(imgSrc)
-                console.log("Image Replaced with " + filename);
             }
             else {
                 console.log('Error loading the image');
@@ -66,10 +63,9 @@ thumbnailArr.forEach(function(thumbnail) {
 }
 
 function storeMeme() {
-    let memeImage = document.getElementById("placeholder").src;
+    newMemePath = filename;
     let topText = document.getElementById("topText").value;
     let bottomText = document.getElementById("bottomText").value;
-
     let xhr = new XMLHttpRequest();
     xhr.open('POST', 'insert_data_to_table.php');
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded'); //sets the value of a HTTP request header.
@@ -80,17 +76,26 @@ function storeMeme() {
         else{
             console.log("data was not saved unfortunately");
         }
+
     };
-    console.log("here comes a long code...")
-    xhr.send('topText=' + topText + '&bottomText=' + bottomText + '&memeImage=' + memeImage);
-    console.log(m);
-}
+    const data = `memePath=${newMemePath}&topText=${topText}&bottomText=${bottomText}`;
+    xhr.send(data);
+} 
+/* function memePath () {
+const memeImage = document.getElementById("placeholder");
+  const imagePath = memeImage.getAttribute("data-image");
+  return imagePath;
+} */
+
 
 function generateMeme() {
-    console.log("meme generated");
     applyTextToImage();
     topTextInput.setAttribute("readonly", true);
     bottomTextInput.setAttribute("readonly", true);
     
   }
+
+function showSavedImage() {
+    applyTextToImage();
+}
 

@@ -27,7 +27,7 @@ $conn = OpenCon();
         <div class="button-container">
             <button class="generate-button" onclick="generateMeme()" >Generate</button>
             <button class="share-button" id=" saveButton" name="saveButton" onclick="storeMeme()" >Save</button>
-            <button class="storage-button" id="storageButton" name="storageButton" onclick="window.location.href='meme_storage.php'">Storage</button>
+            <button class="storage-button" id="storageButton" name="storageButton" onclick="window.location.href='saved_memes.php'">Storage</button>
         </div>
     </div>
     <div class="meme-container">
