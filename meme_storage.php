@@ -1,6 +1,6 @@
 <?php 
 
-// establish a connection to Mysql server, with the server credentials with the function
+// establish a connection to Mysql server, with the server credentials 
 // OpenCon
 include 'db_connection.php';
 $conn = OpenCon();

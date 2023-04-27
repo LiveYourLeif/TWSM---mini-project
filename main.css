@@ -10,20 +10,15 @@ body {
     padding: 1%;
 }
 
-
 .container {
     position: relative;
     float: left;
     margin-left: 10%;
-    
 }
 
 .containerForText{
   position: relative;
 }
-
-.placeholder
-
 
 .container img {
     display: block;
@@ -35,8 +30,6 @@ body {
     text-align: center;
 }
 
-
-
 .meme-container {
     float: right;
     margin-right: 10%;
@@ -46,7 +39,7 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 2 = number of rows, 1fr means that each image takes up the same amount of space */
   grid-template-rows: repeat(2, 1fr); 
-  gap: 10px; /* Gap between the images */
+  gap: 10px;
   margin-top: 20px;
 }
 
@@ -75,18 +68,18 @@ input[type=text] {
 	margin-bottom: 20px;
 	width: 100%;
 	box-sizing: border-box;
-    border-radius: 20px;;
+  border-radius: 20px;;
 }
 
 .button-container {
   display: flex;
-flex-direction: column;
+  flex-direction: column;
   margin-top: 3%;
   margin-left: 0;
   margin-right: 0;
 }
 
-.generate-button, .share-button, .storage-button {
+.generate-button, .save-button, .storage-button {
   background-color: #5ADF96;
   border: none;
   color: white;
@@ -100,7 +93,7 @@ flex-direction: column;
   margin-bottom: 2%;
 }
 
-.generate-button:hover, .share-button:hover, .storage-button:hover {
+.generate-button:hover, .save-button:hover, .storage-button:hover {
   background-color: #4EC282;
 }
 
@@ -120,4 +113,3 @@ flex-direction: column;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
