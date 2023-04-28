@@ -24,5 +24,6 @@ Once the project folder has been moved to the correct folder, and you have edite
 If you haven't already, in your XAMPP control panel, press start on "Apache" and "MySQL" respectively. Go into your browser and run the file "meme_storage.php" like so: http://localhost/TWSM---mini-project/meme_storage.php
 This will create a new table in your database called "memes".
 
+## Running the application
 Lastly to run the application, run the script called main_page.php
 In it, you can choose a meme template, add some text and then press "Generate" to create the image. Press "save" to store the meme in the database, and press "Storage" to see the last meme you created.
