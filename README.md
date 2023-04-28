@@ -4,7 +4,7 @@ Start up with loading up your XAMPP control panel, and press run on "Apache" and
 ## Setting up the database
 In your browser, open up http://localhost/phpmyadmin/
 - Press "new" to create a new database
-- Call that database: twsm---mini-project (three dashes)
+- Call that database: twsm---mini-project
 - for the UTF-8 character encoding choose: utf8mb4_general_ci
 Now you have created the database.
 
